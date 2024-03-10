@@ -1,0 +1,47 @@
+@import url("../fonts/Outfit/main.scss");
+@import url("./scrollbar.scss");
+
+
+html {
+    font-family: "Outfit", sans-serif, system-ui;
+    margin: 0;
+    height: 100vh;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+body {
+    @extend html;
+    
+    display: block;
+    //padding: 75px 0;
+    transition: all .45s ease;
+    //padding-top: 100px;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: #f8f8ff;
+    background-color: #1f1f1f;/* #28292a */
+
+}
+
+// link
+a:link, a:visited {
+    color: #f8f8ff;
+    text-decoration: none;
+    display: inline-block;
+    transition: none;
+    &::after {
+        content: "";
+        width: 0;
+        height: 1px;
+        display: block;
+        background-color: #f8f8ff;
+        margin: 0 0 0 auto;
+    
+        transition: width 0.3s ease;
+    }
+    &:hover::after {
+        width: 100%;
+        margin: 0 auto 0 0;
+    }
+}
